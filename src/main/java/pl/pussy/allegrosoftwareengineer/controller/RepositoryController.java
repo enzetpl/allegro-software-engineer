@@ -5,15 +5,16 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.pussy.allegrosoftwareengineer.model.GithubRepository;
+import pl.pussy.allegrosoftwareengineer.service.UserService;
 import pl.pussy.allegrosoftwareengineer.service.UserServiceImpl;
 
 @RestController
 @RequestMapping("/api")
-public class ReposController {
+public class RepositoryController {
 
-    private final UserServiceImpl userServiceImpl;
+    private final UserService userServiceImpl;
 
-    public ReposController(UserServiceImpl userServiceImpl) {
+    public RepositoryController(UserService userServiceImpl) {
         this.userServiceImpl = userServiceImpl;
     }
 

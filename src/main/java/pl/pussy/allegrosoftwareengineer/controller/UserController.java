@@ -6,15 +6,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.pussy.allegrosoftwareengineer.model.GitHubUser;
+import pl.pussy.allegrosoftwareengineer.service.UserService;
 import pl.pussy.allegrosoftwareengineer.service.UserServiceImpl;
 
 @RestController
 @RequestMapping("/api")
 public class UserController {
 
-    private final UserServiceImpl userServiceImpl;
+    private final UserService userServiceImpl;
 
-    public UserController(UserServiceImpl userServiceImpl) {
+    public UserController(UserService userServiceImpl) {
         this.userServiceImpl = userServiceImpl;
     }
 

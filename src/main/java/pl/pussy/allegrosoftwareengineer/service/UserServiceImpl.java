@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private static final int PAGE_SIZE = 30;
+    private static final int PAGE_SIZE = 100;
     private final GitHubApiClient gitHubApiClient;
 
     public UserServiceImpl(GitHubApiClient gitHubApiClient) {

@@ -3,6 +3,7 @@ package pl.pussy.allegrosoftwareengineer.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.pussy.allegrosoftwareengineer.model.dto.UserStarsDto;
+import pl.pussy.allegrosoftwareengineer.service.UserService;
 import pl.pussy.allegrosoftwareengineer.service.UserServiceImpl;
 
 import java.util.concurrent.ExecutionException;
@@ -11,9 +12,9 @@ import java.util.concurrent.ExecutionException;
 @RequestMapping("/api")
 public class StarsController {
 
-    private final UserServiceImpl userServiceImpl;
+    private final UserService userServiceImpl;
 
-    public StarsController(UserServiceImpl userServiceImpl) {
+    public StarsController(UserService userServiceImpl) {
         this.userServiceImpl = userServiceImpl;
     }
 
