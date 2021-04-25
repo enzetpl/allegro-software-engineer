@@ -22,7 +22,7 @@ For building and running the application you need:
 mvn spring-boot:run
 ```
   - app is now available at [localhost:8080](http://localhost:8080)
-#### Or just use application deployed on heroku (http://google.pl)
+#### Or just use application deployed on heroku (https://sheltered-chamber-04457.herokuapp.com/)
 ## Using application
 ### API endpoints:
 |                                          URL                        | Method |                 Description                       | Example|
@@ -33,5 +33,5 @@ mvn spring-boot:run
 
 ### Additional info
 Solution uses concurrency for get stars, because for users with big collection of repositories counting stars requires a lot of http requests.
-(ex mcirosoft with about 4000 repositories - https://sheltered-chamber-04457.herokuapp.com/api/users/microsoft/stars)
-Application limitation is that GitHub API allows only for 60 requests in a certain period of time, so it's impossible to get stars for user for a user who has more than 6000 repositories. (One request contains max 100 repositories) 
+(ex Microsoft with about 4000 repositories - https://sheltered-chamber-04457.herokuapp.com/api/users/microsoft/stars - 40 requests)
+Application limitation is that GitHub API allows only for 60 requests in a certain period of time, so it's impossible to get stars for user who has more than 6000 repositories. (One request contains max 100 repositories) 
